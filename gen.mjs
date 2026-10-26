@@ -308,6 +308,7 @@ w('blog/index.html', blogIndex());
 for (const p of POSTS) w(`post/${p.slug}/index.html`, postPage(p));
 w('CNAME', 'www.bkkhairrangking.com\n');
 w('.nojekyll', '');
+w('googlecba3355a55016963.html', 'google-site-verification: googlecba3355a55016963.html');
 w('robots.txt', `User-agent: *\nAllow: /\nSitemap: ${SITE}/sitemap.xml\n`);
 w('favicon.svg', `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#8bc53f"/><text x="32" y="43" font-size="34" font-family="Helvetica,Arial" font-weight="700" text-anchor="middle" fill="#fff">3</text></svg>`);
 const urls = [...Object.values(L).map(l=>({u:l.path,m:TODAY,alt:true})), {u:'/blog/',m:TODAY}, ...POSTS.map(p=>({u:postUrl(p),m:p.date}))];
